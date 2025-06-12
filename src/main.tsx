@@ -9,29 +9,32 @@ import Home from "./pages/Home.tsx";
 import Root from "./pages/Root.tsx";
 import ErrorPage from "./pages/ErrorPage.tsx";
 
-const router = createBrowserRouter([
-  {
-    element: <Root />,
-    errorElement: <ErrorPage />,
-    children: [
-      {
-        path: "/",
-        element: <Home />,
-      },
-      {
-        path: "about",
-        element: <About />,
-      },
-      {
-        path: "contacts",
-        element: <Contacts />,
-      },
-    ],
-  },
-]);
+const router = createBrowserRouter(
+  [
+    {
+      element: <Root />,
+      errorElement: <ErrorPage />,
+      children: [
+        {
+          path: "/",
+          element: <Home />,
+        },
+        {
+          path: "about",
+          element: <About />,
+        },
+        {
+          path: "contacts",
+          element: <Contacts />,
+        },
+      ],
+    },
+  ],
+  { basename: "/react-admin/" },
+);
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <RouterProvider router={router} />
-  </StrictMode>
+  </StrictMode>,
 );
