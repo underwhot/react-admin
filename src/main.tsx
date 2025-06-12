@@ -30,7 +30,7 @@ const router = createBrowserRouter(
       ],
     },
   ],
-  { basename: "/react-admin/" },
+  { basename: import.meta.env.BASE_URL },
 );
 
 createRoot(document.getElementById("root")!).render(
