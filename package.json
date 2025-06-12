@@ -1,13 +1,17 @@
 {
-  "name": "react-admin-host",
+  "name": "react-admin",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://underwhot.github.io/react-admin",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "pages-deploy": "gh-pages -d dist",
+    "fetch-content": "rm -rf tmp_gh_pages && git clone --depth 1 --filter=blob:none --sparse --branch gh-pages https://github.com/underwhot/react-admin.git tmp_gh_pages && cd tmp_gh_pages && git sparse-checkout set content images && cp -r content ../dist/content && cp -r images ../dist/images && cd .. && rm -rf tmp_gh_pages",
+    "deploy": "npm run build && npm run fetch-content && npm run pages-deploy"
   },
   "dependencies": {
     "@radix-ui/react-dropdown-menu": "^2.1.15",
@@ -15,6 +19,7 @@
     "@tailwindcss/vite": "^4.1.7",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "gh-pages": "^6.3.0",
     "lucide-react": "^0.511.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
