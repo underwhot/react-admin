@@ -13,7 +13,7 @@ content:
     type: collection
     path: content/posts
     fields: 
-      - { name: title, label: title, type: string }
+      - { name: title, label: Title, type: string }
       - { name: description, label: Description, type: string }
       - { name: image, label: Image, type: image }
       - { name: body, label: Body, type: rich-text }
