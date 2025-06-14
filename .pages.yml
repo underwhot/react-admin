@@ -20,3 +20,10 @@ content:
       - { name: date, label: Publish Date, type: date, required: true  }
       - { name: image, label: Image, type: image, required: true }
       - { name: body, label: Body, type: rich-text, required: true }
+
+  - name: postsIndex
+    label: PostsIndex
+    type: file
+    path: content/posts/index.json
+    fields: 
+      - { name: title, label: Title, type: string, required: true }
