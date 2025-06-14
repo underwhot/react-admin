@@ -1,8 +1,8 @@
 media: images
 content:
-  - name: hero
-    label: Hero Section
-    path: content/hero.json
+  - name: home
+    label: Home Page
+    path: content/homePage.json
     type: file
     fields:
       - { name: title, label: Title, type: string }
@@ -12,7 +12,6 @@ content:
     label: Posts
     type: collection
     path: content/posts
-    format: 'json'
     fields: 
       - { name: title, label: Title, type: string }
       - { name: description, label: Description, type: string }
