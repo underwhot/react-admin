@@ -2,8 +2,8 @@ media: images
 content:
   - name: home
     label: Home Page
-    path: content/homePage.json
     type: file
+    path: content/homePage.json
     fields:
       - { name: title, label: Title, type: string }
       - { name: description, label: Description, type: rich-text }
