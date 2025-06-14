@@ -3,18 +3,21 @@ content:
   - name: home
     label: Home Page
     type: file
-    path: content/homePage.json
+    path: content
+    filename: 'homePage.json'
     fields:
-      - { name: title, label: Title, type: string }
-      - { name: description, label: Description, type: rich-text }
+      - { name: title, label: Title, type: string, required: true }
+      - { name: body, label: Body, type: rich-text, required: true }
       
   - name: posts
     label: Posts
     type: collection
     path: content/posts
+    filename: 'post{primary}.json'
     fields: 
-      - { name: title, label: Title, type: string }
-      - { name: description, label: Description, type: string }
-      - { name: date, label: Publish Date, type: date  }
-      - { name: image, label: Image, type: image }
-      - { name: body, label: Body, type: rich-text }
+      - { name: title, label: Title, type: string, required: true }
+      - { name: published, label: Published, type: boolean, required: true }
+      - { name: description, label: Description, type: string, required: true }
+      - { name: date, label: Publish Date, type: date, required: true  }
+      - { name: image, label: Image, type: image, required: true }
+      - { name: body, label: Body, type: rich-text, required: true }
