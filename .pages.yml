@@ -3,8 +3,7 @@ content:
   - name: home
     label: Home Page
     type: file
-    path: content
-    filename: 'homePage.json'
+    path: content/homePage.json
     fields:
       - { name: title, label: Title, type: string, required: true }
       - { name: body, label: Body, type: rich-text, required: true }
