@@ -38,9 +38,6 @@ content:
         label: Entries
         type: object
         list: true
-        required: false
         fields:
           - { name: title, label: Title, type: string }
           - { name: description, label: Description, type: string }
-          - { name: icon, label: Icon, type: string }
-          - { name: soon, label: Soon, type: boolean }
