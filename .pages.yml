@@ -34,8 +34,8 @@ content:
     path: content/works.json
     fields:
       - { name: title, label: Title, type: string }
-      - name: work
-        label: Work
+      - name: entries
+        label: Entries
         type: object
         list: true
         fields:
