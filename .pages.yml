@@ -38,6 +38,7 @@ content:
         label: Entries
         type: object
         list: true
+        required: false
         fields:
           - { name: title, label: Title, type: string }
           - { name: description, label: Description, type: string }
