@@ -10,7 +10,7 @@ export default function Home() {
       <h1 className="mb-5 text-5xl font-bold">
         {isPending ? "Loading..." : data.title}
       </h1>
-      <div>{isPending ? "Loading..." : data.description}</div>
+      <div>{isPending ? "Loading..." : data.body}</div>
     </section>
   );
 }

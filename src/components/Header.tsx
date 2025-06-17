@@ -2,6 +2,7 @@ import { Link, NavLink } from "react-router";
 import { ModeToggle } from "./theme/mode-toggle";
 
 const links = [
+  { to: "/works", label: "Works" },
   { to: "/about", label: "About" },
   { to: "/contacts", label: "Contacts" },
 ];
